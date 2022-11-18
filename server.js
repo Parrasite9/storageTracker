@@ -33,6 +33,8 @@ if(process.env.PORT){
 //EXPORTED SCHEMA
 const Collection = require('./models/userSchema.js')
 
+const seed = require("./models/collections.js")
+
 // =============================================
 //                    ROUTES
 // =============================================

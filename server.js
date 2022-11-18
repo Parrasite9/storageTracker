@@ -35,3 +35,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log('listening...');
 })
+
+mongoose.connect('mongodb+srv://Parrasite9:4Brothers1995^@cluster0.tw3kise.mongodb.net/?retryWrites=true&w=majority', () => {
+    console.log('connected to mongo');
+})

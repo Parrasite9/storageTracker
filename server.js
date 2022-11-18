@@ -26,7 +26,7 @@ if(process.env.PORT){
 }
 
 app.get('/', (req, res) => {
-    res.send('hi')
+    res.send('test')
 })
 // =============================================
 //                  PORT SETUP

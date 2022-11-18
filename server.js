@@ -30,7 +30,8 @@ if(process.env.PORT){
 //DELETE FEATURE
 // const methodOverride = require('method-override')
 
-
+//EXPORTED SCHEMA
+const Collection = require('./models/userSchema.js')
 
 // =============================================
 //                    ROUTES

@@ -3,6 +3,7 @@
 // =============================================
 
 const mongoose = require('mongoose')
+const mongoURI = 'mogodb://localhost:27017/storage'
 
 
 
@@ -15,6 +16,7 @@ const app = express()
 
 // EXPRESS STATIC
 app.use(express.urlencoded({extended:true})) // THIS ALLOWS YOU TO USE REQ.BODY
+app.use(express.static('public'))
 
 
 // =============================================
@@ -25,9 +27,23 @@ if(process.env.PORT){
     PORT = process.env.PORT
 }
 
+//DELETE FEATURE
+// const methodOverride = require('method-override')
+
+
+
+// =============================================
+//                    ROUTES
+// =============================================
+app.get('/storage/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+
 app.get('/', (req, res) => {
     res.send('test')
 })
+
 // =============================================
 //                  PORT SETUP
 // =============================================

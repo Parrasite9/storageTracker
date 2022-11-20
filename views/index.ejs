@@ -13,7 +13,14 @@
             <th>Name</th>
             <th>Quantity</th>
             <th>Color</th>
-
+            <% for (let i = 0; i < collections.length; i++) { %>
+                <tr>
+                    <td><a href="/storage/<%=collections[i].id; %>"><%= collections[i].name %></a></td>
+                    <td><%= collections[i].quantity %></td>
+                    <td><%= collections[i].color %></td>
+                </tr>
+                
+            <% } %>
         
         </table>
     </div>

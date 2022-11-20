@@ -12,7 +12,7 @@ module.exports = [
         description: "65 inch"
     },
     {
-        name: "Purple Matress"
+        name: "Purple Matress",
         quantity: 1,
         color: "white",
         description: "california king"

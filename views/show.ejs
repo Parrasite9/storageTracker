@@ -7,13 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <a href="/storage" class="button">Back</a>
+    </nav>
+
     <header>
         <h1>Storage Name</h1>
     </header>
     <h2><%= collections.name %></h2>
+    <p><em>Quantity</em></p>
     <p><%= collections.quantity %></p>
+    <p><em>Color</em></p>
     <p><%= collections.color %></p>
+    <p><em>Description</em></p>
     <p><%= collections.description %></p>
+
+    <a href="/storage/<%= collections.id; %>/edit">Edit</a>
+    <a href="#">DELETE</a>
+
+
 
 </body>
 </html>

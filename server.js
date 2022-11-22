@@ -102,9 +102,9 @@ app.delete('/storage/:id', (req, res) => {
     })
 })
 
-// app.get('/', (req, res) => {
-//     res.send('test')
-// })
+app.get('/', (req, res) => {
+    res.send('test')
+})
 
 // =============================================
 //               ADDITIONAL ROUTES

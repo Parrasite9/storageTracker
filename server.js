@@ -103,7 +103,8 @@ app.delete('/storage/:id', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('/storage')
+    // res.send('test')
+    res.redirect('/storage')
 })
 
 // =============================================

@@ -40,7 +40,7 @@ const seed = require("./models/collections.js")
 const { findById, findByIdAndUpdate } = require('./models/userSchema.js')
 
 // =============================================
-//                    ROUTES
+//                  CORE ROUTES
 // =============================================
 
 // NEW 
@@ -105,6 +105,15 @@ app.delete('/storage/:id', (req, res) => {
 // app.get('/', (req, res) => {
 //     res.send('test')
 // })
+
+// =============================================
+//               ADDITIONAL ROUTES
+// =============================================
+
+app.get('/login', (req, res) => {
+    res.render('login.ejs')
+})
+
 
 // =============================================
 //                  PORT SETUP

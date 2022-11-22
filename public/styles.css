@@ -1,3 +1,26 @@
+body {
+    background-color: #FFE7CC;
+}
+/* LOGIN & REGISTRATION */
+
+.inner-row {
+    height: 100vh;
+}
+
 .primaryBg {
-    background: red;
+    background-color: #002E94;
+}
+
+.primaryColor {
+    color: #083AA9;
+}
+.form-box {
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* NAVBAR  */
+
+.nav-item {
+    color: white;
 }

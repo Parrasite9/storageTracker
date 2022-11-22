@@ -24,7 +24,7 @@
                     </div>
                 </form>
                 <div class="mt-3">
-                    <span>Don't have account?</span><button class="p-0 border-0 bg-transparent primaryColor signup-show">Sign Up</button>
+                    <span>Don't have account?</span><button class="p-0 border-0 bg-transparent primaryColor signup-show"> Sign Up</button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
                     </div>
                 </form>
                 <div class="mt-3">
-                    <span>Don't have account?</span><button class="p-0 border-0 bg-transparent primaryColor login-show">Login</button>
+                    <span>Don't have account?</span><button class="p-0 border-0 bg-transparent primaryColor login-show"> Login</button>
                 </div>
             </div>
         </div>
@@ -68,7 +68,9 @@
 </div>
 
 <script>
-    $('.signup-show').click(function (){
+    $(() => {
+        $('.registration-form').hide()
+        $('.signup-show').click(function (){
         $('.registration-form').show()
         $('.login-form').hide()
     })
@@ -77,6 +79,8 @@
         $('.login-form').show()
         $('.registration-form').hide()
     })
+    })
+
 </script>
 
   <% include ('../partials/footer.ejs') %>

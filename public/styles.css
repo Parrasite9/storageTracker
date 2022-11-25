@@ -21,6 +21,99 @@ body {
 
 /* NAVBAR  */
 
-.nav-item {
+/* .nav-item {
     color: white;
+} */
+
+/* INDEX.EJS */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box; */
+    width: 75%;
+    height: auto;
+    /* border: 1px solid #083AA9; */
+}
+
+.button-div {
+    /* box-sizing: border-box; */
+    width: 75%;
+    height: auto;
+    /* border: 1px solid #083AA9; */
+    margin: 0 12.5%;
+}
+
+.add-button-link {
+    margin-right: 10%;
+}
+
+/* SHOW.EJS */
+
+.show-exit {
+    margin: 5%;
+}
+
+.show-container {
+    margin: 5% 10%;
+    box-sizing: border-box;
+    width: 50%;
+    height: auto;
+    border: 1px solid #083AA9;
+    background-color: #fff9f3;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.container-text {
+    margin-left: 5%;
+}
+
+.show-entry {
+    text-indent: 2%;
+}
+
+.edit-delete, .edit-submit-div, .add-item-div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2%;
+}
+
+.edit, .back-button, .edit-submit-button, .add-button {
+    background-color: #003791;
+    color: white;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+}
+
+/* EDIT.EJS */
+
+.edit-h1, .add-h1 {
+    text-indent: 2%;
+    margin-top: 1%;
+}
+
+@media screen and (min-width: 1000px) {
+    
+    .show-container {
+        margin: 5% 10%;
+        box-sizing: border-box;
+        width: 25%;
+        height: auto;
+        border: 1px solid #083AA9;
+    }
+
+    .add-button-link {
+        margin-right: 14%;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+
+    .add-button-link {
+        margin-right: 16%;
+    }
 }

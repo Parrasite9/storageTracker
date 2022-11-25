@@ -31,6 +31,9 @@ if(process.env.PORT){
 //npm i method-override
 const methodOverride = require('method-override')
 
+//MUST HAVE THIS TO HAVE METHODOVERRIDE WORK
+app.use(methodOverride('_method'))
+
 //EXPORTED SCHEMA
 const Collection = require('./models/userSchema.js')
 
@@ -83,7 +86,7 @@ app.get('/storage/:id', (req, res) => {
 //EDIT
 app.get('/storage/:id/edit', (req, res) => {
     Collection.findById(req.params.id, (err, updatedItem) => {
-        res.render('show.ejs', {
+        res.render('edit.ejs', {
             collections: updatedItem
         })
     })

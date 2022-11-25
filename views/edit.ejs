@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Edit <%= collections[i].name %></h1>
-    <form action="/storage/<%=collection.id %>?_method=PUT" method="POST">
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/navbar.ejs') %>
 
-        Item Name: <input type="text" placeholder="Name" name="name">
-        Quantity: <input type="number" placeholder="Quantity" name="quantity">
-        Color: <input type="text" name="color">
-        Description: <input type="textbox" placeholder="Description of item" name="description">
-        <input type="submit" value="submit changes">
+    <h1 class="edit-h1">Edit</h1>
+    <nav class="show-exit">
+        <a href="/storage" class="button"><button class="back-button">Back</button></a>
+    </nav>
+    <div class="show-container">
+        <h1 class=""><%= collections.name %></h1>
+        <div class="container-text">
+            <form action="/storage/<%=collections._id %>?_method=PUT" method="POST">
+
+                Item Name: <br><input class="mb-4 mt-2" type="text" placeholder="<%= collections.name %>" name="name"><br>
+                Quantity: <br><input class="mb-4 mt-2" type="number" placeholder="<%= collections.quantity %>" name="quantity"><br>
+                Color: <br><input class="mb-4 mt-2" type="text" placeholder="<%= collections.color %>" name="description"><br>
+                Description: <br><input class="mb-4 mt-2" type="textbox" placeholder="<%= collections.description %>" name="description"><br>
+                <div class="edit-submit-div">
+                    <input class="mb-4 mt-2 edit-submit-button" type="submit" value="submit changes">
+                </div>    
+            </form>
+        </div>
+    </div>
     
-    </form>
-    
-</body>
-</html>
+<%- include ('../partials/footer.ejs') %>

@@ -1,23 +1,31 @@
 <%- include ('../partials/header.ejs') %>
 <%- include ('../partials/navbar.ejs') %>
-    <nav>
-        <a href="/storage" class="button">Back</a>
+    <nav class="show-exit">
+        <a href="/storage" class="button"><button class="back-button">Back</button></a>
     </nav>
 
-    <header>
-        <h1>Storage Name</h1>
-    </header>
-    <h2><%= collections.name %></h2>
-    <p><em>Quantity</em></p>
-    <p><%= collections.quantity %></p>
-    <p><em>Color</em></p>
-    <p><%= collections.color %></p>
-    <p><em>Description</em></p>
-    <p><%= collections.description %></p>
+    <div class="show-container">
+        <header>
+            <h1>Storage Name</h1>
+        </header>
+        <div class="container-text">
+            <h2><%= collections.name %></h2>
+            <p><em>Quantity</em></p>
+            <p class="show-entry"><%= collections.quantity %></p>
+            <p><em>Color</em></p>
+            <p class="show-entry"><%= collections.color %></p>
+            <p><em>Description</em></p>
+            <p class="show-entry"><%= collections.description %></p>
+        </div>
 
-    <a href="/storage/<%= collections.id; %>/edit">Edit</a>
-    <a href="#">DELETE</a>
+        <div class="edit-delete">
+            <a href="/storage/<%= collections._id; %>/edit" class="me-2"><button class="edit">Edit</button></a>
+            <form action="/storage/<%=collections._id; %>?_method=DELETE" method="POST">
+                <input class="delete" type="submit" value="DELETE" />
+            </form>
+        </div>
+    </div>
 
 
-
+    
 <%- include ('../partials/footer.ejs') %>

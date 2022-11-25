@@ -1,11 +1,12 @@
 <%- include ('../partials/header.ejs') %>
 <%- include ('../partials/navbar.ejs') %>
+<h1 class="ml-2 mt-4 mb-3">Collection Name</h1>
     <div class="container">
-        <h1>Collection Name</h1>
+
         <table>
             <th>Name</th>
             <th>Quantity</th>
-            <th>Color</th>
+            <th class="ml-5">Color</th>
             <% for (let i = 0; i < collections.length; i++) { %>
                 <tr>
                     <td><a href="/storage/<%=collections[i].id; %>"><%= collections[i].name %></a></td>
@@ -17,5 +18,14 @@
         
         </table>
     </div>
+
+        <div class="button-div">
+            <nav class="add-item-div">
+                <a href="/storage/new" class="button add-button-link"><button class="add-button">Add Item</button></a>
+            </nav>
+        </div>
+
+
+    
 
 <%- include ('../partials/footer.ejs') %>

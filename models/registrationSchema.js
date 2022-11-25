@@ -9,6 +9,6 @@ const registrationSchema = new mongoose.Schema ({
 {collection: 'users'}
 )
 
-const Registration = mongoose.model('registration', loginSchema)
+const Registration = mongoose.model('registration', registrationSchema)
 
 module.exports = Registration

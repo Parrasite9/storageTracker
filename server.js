@@ -48,13 +48,13 @@ const { findById, findByIdAndUpdate } = require('./models/userSchema.js')
 //             PASSWORD SETUP (BCRYPT)
 // =============================================
 
-const bcrypt = require('bcryptjs')
+// const bcrypt = require('bcryptjs')
 
-const { username, password: plainTextPassword } = req.body
+// const { username, password: plainTextPassword } = req.body
 
-const password = await bcrypt.hash(password, 10)
+// const password = await bcrypt.hash(password, 10)
 
-console.log(await bcrypt.hash(password, 10));
+// console.log(await bcrypt.hash(password, 10));
 
 
 // =============================================

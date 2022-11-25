@@ -36,11 +36,26 @@ app.use(methodOverride('_method'))
 
 //EXPORTED SCHEMA
 const Collection = require('./models/userSchema.js')
+const Registration = require('./models/registrationSchema.js')
+const Login = require('./models/loginSchema.js')
 
 //DELETE THIS AT END OF PROJECT
 // SEED IMPORT
 const seed = require("./models/collections.js")
 const { findById, findByIdAndUpdate } = require('./models/userSchema.js')
+
+// =============================================
+//             PASSWORD SETUP (BCRYPT)
+// =============================================
+
+const bcrypt = require('bcryptjs')
+
+const { username, password: plainTextPassword } = req.body
+
+const password = await bcrypt.hash(password, 10)
+
+console.log(await bcrypt.hash(password, 10));
+
 
 // =============================================
 //                  CORE ROUTES
